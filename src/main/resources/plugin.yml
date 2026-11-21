@@ -1,0 +1,32 @@
+name: FirestarKits
+version: 1.0.0
+main: pl.firestar.kits.Main
+api-version: "1.20"
+author: Firestar
+description: Kity z edytorem GUI, rangami i cooldownami
+commands:
+  kit:
+    description: Menu kitow i komendy administracyjne
+    usage: /kit [nazwa]
+    aliases: [kity, kits]
+permissions:
+  firestarkits.admin:
+    description: Komendy administracyjne i edytor kitow
+    default: op
+    children:
+      firestarkits.bypass: true
+  firestarkits.bypass:
+    description: Omija cooldowny i wymagane rangi
+    default: op
+  firestarkits.vip:
+    description: Ranga VIP
+    default: false
+  firestarkits.svip:
+    description: Ranga SVIP
+    default: false
+  firestarkits.mvip:
+    description: Ranga MVIP
+    default: false
+  firestarkits.fire:
+    description: Ranga FIRE
+    default: false

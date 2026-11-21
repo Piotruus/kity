@@ -1,0 +1,81 @@
+# ============================================================
+#  FirestarKits - konfiguracja
+#  Kolory: uzywaj &   (np. &a &c &l)
+#  Kity tworzysz i edytujesz w grze: /kit create <nazwa>
+# ============================================================
+
+prefix: "&d&lKITY &8» "
+
+menu-tytul: "&8ᴡʏʙɪᴇʀᴢ ᴋɪᴛ"
+tlo-material: GRAY_STAINED_GLASS_PANE
+ramka-material: PURPLE_STAINED_GLASS_PANE
+
+# true = gracz z wyzsza ranga moze odbierac kity nizszych rang,
+# nawet jesli nie ma ich permisji (np. FIRE odbierze kit VIP)
+hierarchia-rang: true
+
+# automatycznie zaklada zbroje, jesli slot jest pusty
+auto-zaloz-zbroje: true
+
+# zamykaj menu po odebraniu kitu (false = menu zostaje otwarte)
+zamknij-po-odebraniu: false
+
+# napis nad paskiem ekwipunku po odebraniu kitu
+actionbar: true
+
+# Mnoznik cooldownu zalezny od NAJWYZSZEJ rangi gracza.
+# 1.0 = bez zmian, 0.5 = cooldown o polowe krotszy.
+mnoznik-cooldownu:
+  gracz: 1.0
+  vip: 0.9
+  svip: 0.75
+  mvip: 0.6
+  fire: 0.5
+
+# KOLEJNOSC MA ZNACZENIE: od najnizszej do najwyzszej rangi.
+# "permisja" puste = dostepne dla kazdego gracza.
+rangi:
+  gracz:
+    nazwa: "&7Gracz"
+    permisja: ""
+  vip:
+    nazwa: "&a&lVIP"
+    permisja: "firestarkits.vip"
+  svip:
+    nazwa: "&b&lSVIP"
+    permisja: "firestarkits.svip"
+  mvip:
+    nazwa: "&d&lMVIP"
+    permisja: "firestarkits.mvip"
+  fire:
+    nazwa: "&c&lFIRE"
+    permisja: "firestarkits.fire"
+
+# Opis kitu w menu. Dostepne: %ranga% %cooldown% %ilosc% %status%
+menu-lore:
+  - ""
+  - "&7Ranga: %ranga%"
+  - "&7Cooldown: &f%cooldown%"
+  - "&7Przedmiotów: &f%ilosc%"
+  - ""
+  - "%status%"
+  - ""
+  - "&eLPM &7- odbierz kit"
+  - "&ePPM &7- podgląd zawartości"
+
+status-dostepny: "&a✔ Dostępny do odebrania"
+status-cooldown: "&c✘ Odbierzesz za &f%czas%"
+status-ranga: "&c✘ Wymaga rangi %ranga%"
+status-jednorazowy: "&c✘ Jednorazowy - już odebrany"
+status-wylaczony: "&8✘ Kit wyłączony (widzą go tylko admini)"
+
+wiadomosci:
+  odebrano: "&aOdebrałeś kit &r%kit%&a!"
+  odebrano-drop: "&eCzęść przedmiotów nie zmieściła się w ekwipunku i wypadła pod Twoje nogi."
+  cooldown: "&cTen kit odbierzesz ponownie za &f%czas%&c."
+  jednorazowy: "&cTen kit jest jednorazowy i został już przez Ciebie odebrany."
+  brak-rangi: "&cTen kit wymaga rangi %ranga%&c."
+  wylaczony: "&cTen kit jest obecnie wyłączony."
+  nie-ma: "&cNie ma takiego kitu."
+  brak-uprawnien: "&cNie masz uprawnień do tej komendy."
+  tylko-gracz: "&cTa komenda jest tylko dla graczy."
